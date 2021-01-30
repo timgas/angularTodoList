@@ -1,0 +1,105 @@
+.todo-elem {
+  display: flex;
+  width: 100%;
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.time-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.time {
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+}
+
+.importance {
+  padding: 20px;
+  border: 1px solid grey;
+  margin: 0 12px;
+  background: #6a6363;
+  color: white;
+}
+
+.arrow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.arrow__importance {
+  border: solid dodgerblue;
+  border-width: 0 3px 3px 0;
+  padding: 3px;
+}
+
+.arrow__importance:hover {
+  cursor: pointer;
+  border: solid red;
+  border-width: 0 3px 3px 0;
+  opacity: 0.8;
+
+}
+
+.arrow__importance.up {
+  transform: rotate(-135deg);
+}
+
+.arrow__importance.down {
+  transform: rotate(45deg);
+}
+
+.task-value {
+  width: 400px;
+  background: #84e0ee;
+  list-style-type: none;
+  hyphens: auto;
+  overflow: auto;
+  overflow-wrap: break-word;
+}
+
+.block-icons {
+  display: flex;
+  color: white;
+}
+
+.block-icons > div {
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 20px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.block-icons > div:hover {
+  opacity: 0.8;
+}
+
+.editTask {
+  background: green;
+}
+
+.readiness {
+  background: #84e0ee;
+}
+
+.done {
+  background: #1185e4;
+  text-decoration: line-through;
+}
+
+.delete {
+  background: #1185e4;
+}
+
+.hike {
+  display: none;
+}

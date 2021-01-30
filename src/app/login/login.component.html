@@ -1,0 +1,21 @@
+<div class="container">
+<!--     *ngIf="hide"-->
+  <h2>Login</h2>
+  <form [formGroup]="login" (ngSubmit)="onSubmit()" novalidate>
+    <label>
+      Email:
+      <input type="email" formControlName="email" placeholder="Email"
+             [ngClass]="{'is-invalid': submitted && form.email.errors,
+                         'valid' : form.email.valid}">
+    </label>
+    <div *ngIf="submitted && form.email.errors">Incorrect email</div>
+    <label>
+      Password:
+      <input type="password" formControlName="password" placeholder="Password"
+             [ngClass]="{'is-invalid': submitted && form.password.errors,
+                         'valid' : form.password.valid}">
+    </label>
+    <div *ngIf="submitted && form.password.errors">Incorrect password</div>
+    <button type="submit">Login</button>
+  </form>
+</div>

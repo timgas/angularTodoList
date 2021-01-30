@@ -1,0 +1,10 @@
+<h2>TODO list</h2>
+<app-add-task></app-add-task>
+<app-search-task></app-search-task>
+<ul>
+  <li *ngFor="let item of items | async; let i = index" class="todo-elem">
+    <app-task-elem [model]="item"
+                   [index]="i"
+    ></app-task-elem>
+  </li>
+</ul>
