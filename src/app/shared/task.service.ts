@@ -35,17 +35,18 @@ export class TaskService {
     this.save();
   }
 
-  editTask(content, index): void {
+  editTask(content, id): void {
     if (!content) {
       return;
     }
-    this.items[index].content = content;
+    const foundItem = this.findItem(id);
+    foundItem.content = content;
     this.subj$.next(this.items);
     this.save();
   }
 
-  remove(index): void {
-    this.items.splice(index, 1);
+  remove(id): void {
+    this.items = this.items.filter(elem => elem.id !== id);
     this.subj$.next(this.items);
     this.save();
   }
@@ -107,10 +108,6 @@ export class TaskService {
     this.findItem(id).importance = tmpDigit;
     this.subj$.next(this.items);
     this.save();
-  }
-
-  searchTaskItem(filterElem, textMatches): void {
-    this.subj$.next(filterElem);
   }
 
   save(): void {

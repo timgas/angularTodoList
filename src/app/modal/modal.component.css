@@ -1,8 +1,25 @@
-/*
-.modal-container {
- !* opacity: 1;
-  z-index: 1000;*!
+app-modal {
+  display: none;
+}
+
+app-modal h2, h3 {
+  margin: 0 auto;
+}
+
+.modal {
+  position: absolute;
+  top: 100px;
+  left: 40%;
+  width: 300px;
+  height: auto;
+  background-color: rgb(162, 162, 137);
+  z-index: 1100;
+}
+
+.modal-body {
   display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .modal-overlay {
@@ -12,96 +29,40 @@
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, .5);
-  z-index: -1;
+  z-index: 1000;
 }
 
-.modal-edit,
-.modal-delete{
-  width: 300px;
-  border-radius: 5px;
-  background: #878c94;
-  height: 200px;
-  transform: translateY(-200px);
-  transition: transform .2s ease-in;
+label {
+  margin: 0 auto;
 }
 
-.modal-header {
-  text-align: center;
-}
-
-.modal-title {
-  font-size: 32px;
-}
-
-.modal-body {
-  align-items: center;
-  width: 1.5rem;
-  margin: 0 50px;
-}
-
-.modal-body input {
-  height: 90px;
+.edit {
   width: 200px;
+  height: 100px;
 }
 
 .modal-footer {
-  padding: 10px 60px;
-  display: flex;
-  justify-content: space-around;
+  margin: 0 auto;
+  display: inline-block;
 }
 
-.modal-footer button {
+
+.modal-footer_no,
+.modal-footer_yes{
   cursor: pointer;
   color: #fff;
   border: none;
   border-radius: 3px;
   background: cornflowerblue;
-  padding: 10px 30px;
+  padding: 10px 40px;
+  vertical-align: top;
   margin: 0 5px;
 }
-*/
-/*
 
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, .5);
-  z-index: 900;
+.modal-footer_no:hover {
+  background-color: #d27b7b;
 }
 
-.modal-body {
-  z-index: 1000;
-  padding: 100px;
-}
-*/
-
-app-modal {
-  display: none;
-}
-
-.modal {
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  top: 100px;
-  background-color: rgb(107, 107, 93);
-  z-index: 1100;
-}
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, .5);
-  z-index: 1000;
-}
-
-.edit {
-  width: 200px;
-  height: 200px;
+.modal-footer_yes:hover {
+  background-color: #a5c879;
 }

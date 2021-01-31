@@ -2,9 +2,11 @@
 .todo__search {
   display: flex;
   align-items: flex-end;
-  margin: 20px 30px;
+  margin: 40px 40px;
 }
+
 .todo__search > div {
+  padding: 0 10px;
   color: #b1b1b1;
 }
 

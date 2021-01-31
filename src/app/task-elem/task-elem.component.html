@@ -20,16 +20,20 @@
 
 <!--Modal Windows-->
 <app-modal id="m-edit-{{index}}">
-  <label>
-    Edit Task
+  <h2>Edit Task</h2>
+  <label for="edit">
     <input class="edit" type="text" [(ngModel)]="content">
   </label>
-  <button (click)="closeModal('m-edit')">No</button>
-  <button (click)="saveChangeItem(  'm-edit' )">Yes</button>
+  <div class="modal-footer">
+    <button class="modal-footer_no" (click)="closeModal('m-edit')">No</button>
+    <button class="modal-footer_yes" (click)="saveChangeItem(  'm-edit' )">Yes</button>
+  </div>
 </app-modal>
 
 <app-modal id="m-delete-{{index}}">
-  <div>Delete</div>
-  <button (click)="closeModal('m-delete')">No</button>
-  <button (click)="saveChangeItem( 'm-delete' )">Yes</button>
+  <h3>Delete item?</h3>
+  <div class="modal-footer">
+    <button class="modal-footer_no" (click)="closeModal('m-delete')">No</button>
+    <button class="modal-footer_yes" (click)="saveChangeItem( 'm-delete' )">Yes</button>
+  </div>
 </app-modal>

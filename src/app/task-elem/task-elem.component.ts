@@ -69,9 +69,9 @@ export class TaskElemComponent implements OnInit, AfterViewInit, OnDestroy {
 
   saveChangeItem(action: string): void {
     if (action === 'm-delete') {
-      this.taskSrv.remove(this.index);
+      this.taskSrv.remove(this.model.id);
     } else if (action === 'm-edit') {
-      this.taskSrv.editTask( this.content, this.index);
+      this.taskSrv.editTask( this.content, this.model.id);
       this.closeModal(action);
       this.content = '';
     }

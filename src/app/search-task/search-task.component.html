@@ -3,7 +3,7 @@
   <div class="sort-importance">123</div>
   <div class="">
     <label>
-      <input [(ngModel)]="content" (ngModelChange)="searchTaskItem($event)" class="searchField" type="text">
+      <input #content (input)="searchTaskItem(content.value)" class="searchField" type="text">
     </label>
   </div>
   <div class="filter-done"><i class="fas fa-filter"></i></div>

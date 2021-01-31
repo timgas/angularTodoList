@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {TaskService} from '../shared/task.service';
 import {Observable} from 'rxjs';
 
@@ -10,10 +10,16 @@ import {Observable} from 'rxjs';
 export class TaskContainerComponent implements OnInit {
 
   items: Observable<any>;
+  styleHide = '';
+
   constructor(private taskSrv: TaskService) {}
 
   ngOnInit(): void {
     this.items = this.taskSrv.todos;
+  }
+
+  handler(event: string): void {
+    this.styleHide = event;
   }
 
 }
